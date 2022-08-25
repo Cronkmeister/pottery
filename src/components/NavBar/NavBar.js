@@ -1,17 +1,17 @@
 import React from "react";
 import "./NavBar.scss";
-import { Link } from "react-router-dom";
 
 import { VscAccount } from "react-icons/vsc";
 import { AiOutlineShopping } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
     <nav>
-      <div className="logo">
+      <Link className="logo" to="/">
         <div className="logo__text">Rocky Studios</div>
         <p className="logo__tagline">Artisan Pottery</p>
-      </div>
+      </Link>
       <ul className="nav-links">
         <Link className="nav-links__link" to="/shop">
           Shop

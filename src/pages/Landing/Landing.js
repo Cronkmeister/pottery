@@ -1,34 +1,22 @@
 import React from "react";
 import "./Landing.scss";
 
+//components
+import ProdCard from "../../components/ProdCard/ProdCard";
+
 // imgs
 import plates from "../../assests/images/tom-crew-bowls-unsplash.jpg";
 import jugs from "../../assests/images/tom-crew-jugs-unsplash.jpg";
 import mugs from "../../assests/images/tom-crew-mugs-unsplash.jpg";
 
 // icons
-import { AiOutlineInstagram, AiOutlineShopping } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import { VscAccount } from "react-icons/vsc";
 
 export default function Landing() {
   return (
     <>
-      <nav>
-        <div className="logo">
-          <div className="logo__text">Rocky Studios</div>
-          <p className="logo__tagline">Artisan Pottery</p>
-        </div>
-        <ul className="nav-links">
-          <li className="nav-links__link">Shop</li>
-          <li className="nav-links__link">About</li>
-          <li className="nav-links__link">Contact</li>
-          <VscAccount className="nav-links__icon" />
-          <AiOutlineShopping className="nav-links__icon" />
-        </ul>
-        {/* <div></div> */}
-      </nav>
       <header className="main">
         <button className="shop-btn">See Collections</button>
       </header>
@@ -36,18 +24,9 @@ export default function Landing() {
       <section>
         <div className="products">
           <div className="products__wrapper">
-            <div className="prod-card">
-              <img className="prod-card__img" src={plates} alt="plates"></img>
-              <h3>plates</h3>
-            </div>
-            <div className="prod-card">
-              <img className="prod-card__img" src={jugs} alt="jugs"></img>
-              <h3>jugs</h3>
-            </div>
-            <div className="prod-card">
-              <img className="prod-card__img" src={mugs} alt="mugs"></img>
-              <h3>mugs</h3>
-            </div>
+            <ProdCard image={plates} text="Plates" />
+            <ProdCard image={jugs} text="Jugs" />
+            <ProdCard image={mugs} text="Mugs" />
           </div>
         </div>
       </section>

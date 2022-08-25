@@ -4,10 +4,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: $primary-color-white;
+    color: inherit;
     position: absolute;
     width: 100%;
     // @include display-flex(row, center, space-between)
+    background-color: rgba(205, 205, 205, 0.1);
 }
 
 .nav-links {
@@ -17,6 +18,7 @@ nav {
     &__link {
         padding: 0 1rem;
         text-decoration: none;
+        color: inherit;
         &:hover {
             cursor: pointer;
         }
@@ -35,6 +37,11 @@ nav {
     justify-content: center;
     align-items: center;
     max-width: 240px;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        cursor: pointer;
+    }
     &__text {
         font-family: "creattion_demoregular";
         font-size: 50px;
