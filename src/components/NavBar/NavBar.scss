@@ -1,14 +1,15 @@
 @use "../../styles/global.scss" as *;
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
     color: inherit;
     // position: absolute;
-    width: 100%;
-    // @include display-flex(row, center, space-between)
+    width: 100%; 
     background-color: rgba(205, 205, 205, 0.1);
+}
+.nav-wrapper {
+    @include margin;
+    @include display-flex(row, center, space-between)
 }
 
 .nav-links {
