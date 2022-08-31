@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./NavBar.scss";
 
 import { VscAccount } from "react-icons/vsc";
 import { AiOutlineShopping } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function NavBar() {
+  const [onHome, setOnHome] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setOnHome(true);
+    } else {
+      setOnHome(false);
+    }
+    console.log(onHome);
+  }, [location]);
+
   return (
-    <nav className="primary-navigation">
+    <nav className={onHome ? "primary-navigation" : null}>
       <div className="nav-wrapper">
         <Link className="logo" to="/">
           <div className="logo__text">Rocky Studios</div>

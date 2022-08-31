@@ -7,6 +7,9 @@ nav {
     width: 100%; 
     background-color: rgba(205, 205, 205, 0.1);
 }
+.primary-navigation {
+    color: $primary-color-white;
+}
 .nav-wrapper {
     @include margin;
     @include display-flex(row, center, space-between)

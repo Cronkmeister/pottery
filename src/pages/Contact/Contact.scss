@@ -1,0 +1,42 @@
+@use "../../styles/global.scss" as *;
+
+.contact {
+    &__wrapper {
+        @include margin;
+    }
+    &__title {
+        @include page-header;
+        @include page-title;
+        @include header-padding;
+    }
+    &__info-container {
+        max-width: 780px;
+        margin: 0 auto;
+    }
+    &__sub-container {
+        text-align: center;
+    }
+    &__bold-copy {
+       @include subheader;
+       margin-bottom: 0.5rem;
+    }
+    &__copy {
+        @include body-copy;
+        margin-bottom: 2rem;
+    }
+    &__form {
+        // border: dashed blue 1px;
+        @include display-flex (column, center, center);
+        & > input {
+            width: 100%;
+            @include component-margin-top-bottom-flex;
+            padding: 8px 8px;
+            border: solid 1px $primary-color-grey;
+            color: $primary-color-dark-grey;
+        }
+        &--message {
+            padding-bottom: 6rem;
+        }
+    }
+  
+}
