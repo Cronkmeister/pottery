@@ -21,7 +21,7 @@ export default function Contact() {
             </h4>
           </div>
           <form className="contact__form">
-            <div>
+            <div className="contact__form--sub-container">
               <input
                 className="contact__form--name"
                 placeholder="Your name"
@@ -39,6 +39,7 @@ export default function Contact() {
               className="contact__form--message"
               placeholder="Your message"
             ></input>
+            <button className="contact__form--button">Submit</button>
           </form>
         </div>
       </div>
