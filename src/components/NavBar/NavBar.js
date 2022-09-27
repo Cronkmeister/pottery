@@ -9,13 +9,13 @@ export default function NavBar() {
   const [onHome, setOnHome] = useState(true);
   const location = useLocation();
 
+  //when not on home page, hook for Nav color change
   useEffect(() => {
     if (location.pathname === "/") {
       setOnHome(true);
     } else {
       setOnHome(false);
     }
-    console.log(onHome);
   }, [location]);
 
   return (
