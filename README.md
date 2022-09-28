@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# E-Comm Site for a Local Pottery Maker
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
