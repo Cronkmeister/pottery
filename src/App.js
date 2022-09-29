@@ -5,6 +5,8 @@ import Landing from "./pages/Landing/Landing";
 import Shop from "./pages/Shop/Shop";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import PaySuccess from "./pages/PaySuccess/PaySuccess";
+import PayCancel from "./pages/PayCancel/PayCancel";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/success" element={<PaySuccess />} />
+          <Route path="/cancel" element={<PayCancel />} />
         </Routes>
       </div>
     </BrowserRouter>

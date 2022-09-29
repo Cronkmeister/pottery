@@ -1,11 +1,27 @@
 import React, { useState } from "react";
 import "./Shop.scss";
+import axios from "axios";
 
 // icons
 import { HiOutlineChevronDown } from "react-icons/hi";
 
 // imgs
 import mug1 from "../../assests/images/mugs/mug1.jpg";
+
+const apiURL = "http://localhost:5050/api/stripe/create-checkout-session";
+const options = {
+  method: "POST",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json;charset=UTF-8",
+  },
+  body: JSON.stringify({
+    items: [
+      { id: 1, quantity: 3 },
+      { id: 2, quantity: 1 },
+    ],
+  }),
+};
 
 export default function Shop() {
   const [showing, setShowing] = useState(false);
@@ -16,6 +32,22 @@ export default function Shop() {
       setShowing(false);
     } else if (!showing) setShowing(true);
   }
+
+  const handleCheckout = (event) => {
+    event.preventDefault();
+    fetch(apiURL, options)
+      .then((response) => {
+        console.log(response);
+        if (response.ok) return response.json();
+        return response.json().then((json) => Promise.reject(json));
+      })
+      .then(({ url }) => {
+        window.location = url;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="shop">
@@ -80,6 +112,10 @@ export default function Shop() {
           </div>
         </div>
       </section>
+      {/* <form action={apiURL} method="POST"> */}
+      <form onSubmit={handleCheckout}>
+        <button type="submit">Checkout</button>
+      </form>
     </div>
   );
 }
