@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Shop.scss";
-import axios from "axios";
+// import axios from "axios";
 
 // icons
 import { HiOutlineChevronDown } from "react-icons/hi";
@@ -105,7 +105,11 @@ export default function Shop() {
         <div className="shop__items-container">
           <div className="shop__items-card">
             <div className="shop__items-card--sub-container">
-              <img className="shop__items-card--image" src={mug1}></img>
+              <img
+                className="shop__items-card--image"
+                src={mug1}
+                alt="shop item"
+              ></img>
             </div>
             <h4 className="shop__items-card--title">White Glaze Mug</h4>
             <p className="shop__items-card--price">$35</p>

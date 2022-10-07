@@ -28,21 +28,30 @@
 }
 
 .products {
-    margin-top: 4rem;
+    // margin-top: 4rem;
     margin-bottom: 4rem;
+    &__title {
+        text-align: center;
+        @include page-header;
+        @include header-padding;
+        // @include page-title;
+    }
     &__wrapper {
         @include margin;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         justify-items: center;
-       
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
 .prod-card {
     position: relative;
     height: 340px;
-    width: 250px;
+    // width: 250px;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     &__img-container {
         height: 100%;

@@ -8,26 +8,6 @@
         @include page-header;
         @include header-padding;
         @include page-title;
-        // overflow: hidden;
-        // text-align: center;
-        // color: $primary-color-dark-grey;
-        // &::before, &::after {
-        //     background-color: $primary-color-grey;
-        //     content: "";
-        //     display: inline-block;
-        //     height: 1px;
-        //     position: relative;
-        //     vertical-align: middle;
-        //     width: 25%;
-        // } 
-        // &::after {
-        //     left: 0.5em;
-        //     margin-right: -50%;
-        // }
-        // &::before {
-        //     right: 0.5em;
-        //     margin-left: -50%;
-        // }
     }
     &__sub-heading {
         text-align: center;

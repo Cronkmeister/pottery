@@ -23,6 +23,7 @@ export default function Landing() {
       {/* collections of products */}
       <section>
         <div className="products">
+          <h1 className="products__title">Collections</h1>
           <div className="products__wrapper">
             <ProdCard image={plates} text="Plates" />
             <ProdCard image={jugs} text="Jugs" />
