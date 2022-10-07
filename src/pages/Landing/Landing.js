@@ -2,6 +2,7 @@ import React from "react";
 import "./Landing.scss";
 
 //components
+import NavBar from "../../components/NavBar/NavBar";
 import ProdCard from "../../components/ProdCard/ProdCard";
 
 // imgs
@@ -17,6 +18,7 @@ import { FiMail } from "react-icons/fi";
 export default function Landing() {
   return (
     <>
+      <NavBar />
       <header className="main">
         <button className="shop-btn">See Collections</button>
       </header>

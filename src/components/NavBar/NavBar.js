@@ -25,7 +25,7 @@ export default function NavBar() {
           <div className="logo__text">Rocky Studios</div>
           <p className="logo__tagline">Artisan Pottery</p>
         </Link>
-        <ul className="nav-links">
+        <div className="nav-links">
           <Link className="nav-links__link" to="/shop">
             Shop
           </Link>
@@ -35,9 +35,13 @@ export default function NavBar() {
           <Link className="nav-links__link" to="/contact">
             Contact
           </Link>
-          <VscAccount className="nav-links__icon" />
-          <AiOutlineShopping className="nav-links__icon" />
-        </ul>
+          <div className="nav-links__icon-container">
+            <Link className="nav-links__link" to="/login">
+              <VscAccount className="nav-links__icon" />
+            </Link>
+            <AiOutlineShopping className="nav-links__icon" />
+          </div>
+        </div>
       </div>
     </nav>
   );

@@ -1,6 +1,5 @@
 import "./App.scss";
 import "./styles/global.scss";
-// import NavBar from "./components/NavBar/NavBar";
 import Landing from "./pages/Landing/Landing";
 import Shop from "./pages/Shop/Shop";
 import About from "./pages/About/About";
@@ -15,7 +14,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        {/* <NavBar /> */}
         <Routes>
           <Route path="/" exact element={<Landing />} />
           <Route path="/shop" element={<Shop />} />

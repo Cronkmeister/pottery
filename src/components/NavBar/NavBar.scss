@@ -3,7 +3,6 @@
 nav {
     
     color: inherit;
-    // position: absolute;
     width: 100%; 
     background-color: rgba(205, 205, 205, 0.1);
 }
@@ -12,15 +11,16 @@ nav {
 }
 .nav-wrapper {
     @include margin;
-    @include display-flex(row, center, space-between)
+    @include display-flex(row, center, space-between);
+    
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    padding-right: 1rem;
+    justify-content: space-between;
+    width: 33%;
     &__link {
-        padding: 0 1rem;
         text-decoration: none;
         color: inherit;
         &:hover {
@@ -30,7 +30,6 @@ nav {
     &__icon {
         font-size: 1.5rem;
         margin: 0 0.5rem;
-
     }
 }
 
@@ -40,7 +39,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 240px;
+    width: 240px;
     text-decoration: none;
     color: inherit;
     &:hover {

@@ -6,8 +6,7 @@
     top: 92px;
     &__banner {
         position: relative;
-        background-image: url(../../assests/images/shelves.jpg);
-        background-color: rgba(0, 255, 255, 0.248);
+        background-image:linear-gradient(rgba(76, 76, 76, 0.3), rgba(255, 255, 255, 0.2)), url(../../assests/images/shelves.jpg);
         background-position: 50% 38%;
         height: 25vh;
         background-size: cover;
