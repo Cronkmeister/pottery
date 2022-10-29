@@ -3,16 +3,20 @@ import "./About.scss";
 import NavBar from "../../components/NavBar/NavBar";
 
 //imgs
-import potteryWheel from "../../assests/images/pottery-wheel-hands.jpg";
-import potteryJugWhite from "../../assests/images/pottery-jug-white.jpg";
+// import potteryWheel from "../../assests/images/pottery-wheel-hands.jpg";
+// import potteryJugWhite from "../../assests/images/pottery-jug-white.jpg";
 
 export default function About() {
   return (
     <>
       <NavBar />
       <section className="about">
+        <div className="about__banner">
+          <h1 className="about__banner--text">About</h1>
+          <div className="about__banner--overlay"></div>
+        </div>
         <div className="about__wrapper">
-          <h1 className="about__title">About </h1>
+          {/* <h1 className="about__title">About </h1> */}
           <h2 className="about__sub-heading">
             Local hand crafted, beautiful custom designs
           </h2>
@@ -38,7 +42,7 @@ export default function About() {
               etiam erat velit scelerisque. At imperdiet dui accumsan sit amet.
             </p>
           </div>
-          <div className="about__hero-img--container">
+          {/* <div className="about__hero-img--container">
             <img
               className="about__hero-img"
               src={potteryWheel}
@@ -49,7 +53,7 @@ export default function About() {
               src={potteryJugWhite}
               alt="white jug"
             ></img>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

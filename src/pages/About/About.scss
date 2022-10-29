@@ -1,6 +1,26 @@
 @use "../../styles/global.scss" as *;
 
 .about {
+    &__banner {
+        position: relative;
+        background-image:linear-gradient(rgba(76, 76, 76, 0.3), rgba(255, 255, 255, 0.2)), url(../../assests/images/pottery-jug-white.jpg);
+        background-position: 40% 50%;
+        height: 25vh;
+        background-size: cover;
+        @include display-flex(row, center, center);
+        &--text {
+            color: $primary-color-white;
+            @include page-header;
+            letter-spacing: 2px;
+        }   
+        &--overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+         
+        }
+    }
+
     &__wrapper {
         @include margin;
     }
@@ -12,7 +32,9 @@
     &__sub-heading {
         text-align: center;
         @include subheader;
-        
+        // @include header-padding;
+        margin-top: 2rem;
+        // @include page-title;
     }
     &__copy-container {
         max-width: 500px;
