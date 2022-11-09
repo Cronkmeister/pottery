@@ -153,6 +153,15 @@
   }
 }
 
+@mixin component-padding-top-bottom-small {
+  padding-top: calc($mobile-padding/2);
+  padding-bottom: calc($mobile-padding/2);
+  @include tablet {
+    padding-top: calc($tablet-padding/2);
+    padding-bottom: calc($tablet-padding/2);
+  }
+}
+
 @mixin component-margin-top-bottom {
   margin-top: $mobile-margin;
   margin-bottom: $mobile-margin;

@@ -1,2 +1,157 @@
 @use "../../styles/global.scss" as *;
 
+
+.cart {
+    // @include display-flex(row, center, center);
+    @include margin;
+    // border: 1px dashed black;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    &__ls-container {
+        // border: 1px dashed black;
+        @include tablet {
+            width: 70%;
+        }
+    }
+
+    &__rs-container {
+        // border: 1px dashed black;
+        width: 100%;
+        @include tablet {
+            width: 200px;
+        }
+    }
+    &__heading-container {
+        @include display-flex(row, center, flex-start);
+        margin-top: 1rem;
+    }
+
+    &__title {
+        // @include page-header;
+        font-size: 1.6rem;
+        margin-right: 0.5rem;
+        font-weight: 600;
+    }
+    &__items-total {
+        font-size: 1.2rem;
+        color: grey;
+    }
+
+    &__product-card {
+        @include component-margin-top-bottom;
+        // border: 1px dashed black;
+        display: flex;
+        // padding-bottom: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+        &--imageContainer {
+            height: 12rem;
+            min-width: 10rem;
+        }
+
+        &--image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        &--detailContainer {
+            margin-left: 10px;
+            @include body-copy;
+            display: flex;
+            flex-direction: column;
+            height: 12rem;
+            width: 100%;
+        }
+        
+        &--title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+    }
+
+    &__product-details {
+        display: flex;
+        margin-top: 8px;
+        justify-content: flex-end;
+
+        &--subCon {
+            width: 5rem;
+            @include display-flex(column, center, center)
+        }
+    }
+
+    &__order-title {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        font-weight: 600;
+    }
+
+    &__price-container {
+        @include component-margin-top-bottom;
+        @include display-flex(row, center, space-between);
+        @include body-copy;
+        padding-bottom: 4px;
+        // @include component-gutter;
+        border-bottom: 1px solid $primary-color-grey;
+    }
+}
+
+.quantity {
+    display: flex;
+    @include display-flex(row, center, center);
+
+    &__tot {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+}
+
+.remove-btn {
+    @include labels-buttons;
+    // @include body-copy;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    background: none;
+    border: none;
+    border-bottom: 1px grey solid;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    &:hover {
+        // border-bottom: 1px rgb(175, 0, 0) solid;
+        color: grey
+    }
+
+    &__container {
+        flex-grow: 1;
+        position: relative;  
+    }
+
+}
+
+.checkout-btn {
+    @include labels-buttons;
+    width: 100%;
+    padding: 4px 0;
+    background-color: $primary-color-grey;
+    color: $primary-color-dark-grey;
+    // border: 2px solid $primary-color-dark-grey;
+    border: none;
+    cursor: pointer;
+    transition: all ease-in 0.2;
+    &:hover {
+        color: $primary-color-2-white;
+        background-color: $primary-color-1-black;
+    }
+
+}
