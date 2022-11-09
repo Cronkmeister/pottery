@@ -39,7 +39,9 @@ export default function NavBar() {
             <Link className="nav-links__link" to="/login">
               <VscAccount className="nav-links__icon" />
             </Link>
-            <AiOutlineShopping className="nav-links__icon" />
+            <Link className="nav-links__link" to="/cart">
+              <AiOutlineShopping className="nav-links__icon" />
+            </Link>
           </div>
         </div>
       </div>
